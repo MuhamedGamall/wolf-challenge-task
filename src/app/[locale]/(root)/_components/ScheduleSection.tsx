@@ -62,8 +62,7 @@ export default function ScheduleSection({ t }: { t: any }) {
           <h2 className="max-sm:text-lg text-2xl font-medium text-white mb-3 w-full">
             {t("schedule.title")}
           </h2>
-          <Image src={"/DALL·E 2025-01-18 23.21.05 - A simple and clean dashboard interface for a university student portal, styled with a dark theme and green accents. The 'Schedule' section should disp.webp"} alt="schedule" width={1000} height={1000} className="object-cover rounded-xl w-full"/>
-        </div>
+          <div className="w-full h-[430px]  rounded-xl bg-gradient-to-br from-[#343434] to-[#484848] shadow-[0px_0px_15px_0px_#00000033]" />        </div>
         <div className="flex-[1.2] flex max-md:flex-col lg:flex-col gap-7">
           <UpcomingSection t={t} type="upcomingMeetings" />
           <UpcomingSection t={t} type="upcomingTasks" />
