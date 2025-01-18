@@ -1,0 +1,164 @@
+{
+  "MetaData": {
+    "title": "Wolf Challenge Task",
+    "description": "Wolf Challenge Task, built with Next.js and Tailwind CSS."
+  },
+  "Layout": {
+    "Header": {
+      "title": {
+        "home": "لوحة التحكم",
+        "courses": "الدورات",
+        "courseName": "اسم الدورة",
+        "library": "المكتبة",
+        "teachers": "المدرسين",
+        "universities": "الجامعات"
+      },
+      "UserProfile": {
+        "userName": "اسم المستخدم",
+        "viewProfile": "عرض الملف الشخصي"
+      },
+      "group": "المجموعة 1",
+
+      "LocaleSwitcher": {
+        "label": "اللغة",
+        "locale": "{locale}"
+      }
+    },
+    "Sidebar": {
+      "home": "لوحة التحكم",
+      "courses": "الدورات",
+      "library": "المكتبة",
+      "teachers": "المدرسين",
+      "universities": "الجامعات"
+    },
+    "Pages": {
+      "Home": {
+        "Content": {
+          "Sections": {
+            "schedule": { "title": "الجدول الزمني" },
+            "upcomingMeetings": {
+              "title": "المواعيد القادمة",
+              "tuesday": {
+                "date": "5/7",
+                "day": "الاثنين",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "التحليل"
+              },
+              "wednesday": {
+                "date": "4/7",
+                "day": "الثلاثاء",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "الكالكولوم"
+              }
+            },
+            "upcomingTasks": {
+              "title": "المهام القادمة",
+              "tuesday": {
+                "date": "5/7",
+                "day": "الاثنين",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "الجبر"
+              },
+              "wednesday": {
+                "date": "4/7",
+                "day": "الثلاثاء",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "الجغرافية"
+              }
+            },
+            "myCourses": {
+              "title": "دوراتي",
+              "viewAll": "عرض الكل",
+              "card": {
+                "title": "اسم الدورة",
+                "teacherName": "اسم المدرس"
+              }
+            },
+            "library": {
+              "title": "المكتبة",
+              "viewAll": "عرض الكل",
+              "card": {
+                "title": "اسم الكتاب",
+                "teacherName": "اسم المدرس"
+              }
+            },
+            "featuredTeachers": {
+              "title": "المدرسين المميزين",
+              "viewAll": "عرض الكل",
+              "card": {
+                "teacherName": "اسم المدرس",
+                "coursesLength": "الدورات: 14",
+                "booksLength": "الكتب: 12"
+              }
+            }
+          }
+        }
+      },
+      "MyCourses": {
+        "Content": {
+          "Sections": {
+            "courseCard": {
+              "title": "اسم الدورة",
+              "teacherName": "اسم المدرس",
+              "addCourse": {
+                "title": "اضافة دورة"
+              }
+            }
+          }
+        },
+
+        "Course": {
+          "Content": {
+            "Sections": {
+              "hiddenBtn": "أخفاء",
+              "announcementsSection": {
+                "label": "الإعلانات",
+                "data": {
+                  "title": "قسم الاختبارات",
+                  "desc": "لا يوجد من يحب الألم بذاته، أو يسعى وراءه، لأنه ألم...",
+                  "date": "2023-10-06"
+                }
+              },
+              "tasksSection": {
+                "label": "المهام",
+                "submitted": "تم الإرسال",
+                "ended": "انتهى",
+                "submitBtn": "إرسال",
+                "uploadBtn": "إرفاق ملف",
+                "data": {
+                  "title": "قسم الواجبات",
+                  "desc": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة والنشر.",
+                  "type": "واجب",
+                  "date": "2023-10-01",
+                  "time": "10:00 صباحًا",
+                  "dummyFileName": "اسم ملف افتراضي"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Library": {
+        "Content": {
+          "Sections": {
+            "libraryCard": {
+              "title": "اسم الكتاب",
+              "teacherName": "اسم المدرس"
+            }
+          }
+        }
+      },
+      "Teachers": {
+        "Content": {
+          "Sections": {
+            "teacherCard": {
+              "teacherName": "اسم المدرس",
+              "coursesLength": "الدورات: 14",
+              "booksLength": "الكتب: 12"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -77,35 +77,3 @@ export const TASKS = [
     isFinished: false,
   },
 ];
-export const Announcements = [
-  {
-    title: "Announcement ",
-    desc: "Lorem ipsum dolor sit amet consectetur. Cras diam pellentesque turpis ornare vestibulum.",
-    date: "2023-10-01",
-    isFinished: false,
-  },
-  {
-    title: "Announcement 2",
-    desc: "Lorem ipsum dolor sit amet consectetur. Cras diam pellentesque turpis ornare vestibulum.",
-    date: "2023-10-01",
-    isFinished: false,
-  },
-  {
-    title: "Announcement 3",
-    desc: "Lorem ipsum dolor sit amet consectetur. Cras diam pellentesque turpis ornare vestibulum.",
-    date: "2023-10-01",
-    isFinished: false,
-  },
-  {
-    title: "Announcement 4",
-    desc: "Lorem ipsum dolor sit amet consectetur. Cras diam pellentesque turpis ornare vestibulum.",
-    date: "2023-10-01",
-    isFinished: true,
-  },
-  {
-    title: "Announcement 5",
-    desc: "Lorem ipsum dolor sit amet consectetur. Cras diam pellentesque turpis ornare vestibulum.",
-    date: "2023-10-01",
-    isFinished: true,
-  },
-];

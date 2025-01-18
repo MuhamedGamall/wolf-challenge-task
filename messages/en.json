@@ -1,0 +1,162 @@
+{
+  "MetaData": {
+    "title": "Wolf Challenge Task",
+    "description": "Wolf Challenge Task, built with Next.js and Tailwind CSS."
+  },
+  "Layout": {
+    "Sidebar": {
+      "home": "Dashboard",
+      "courses": "Courses",
+      "library": "Library",
+      "teachers": "Teachers",
+      "universities": "Universities"
+    },
+    "Header": {
+      "title": {
+        "home": "Dashboard",
+        "courses": "Courses",
+        "courseName": "Course Name",
+        "library": "Library",
+        "teachers": "Teachers",
+        "universities": "Universities"
+      },
+      "UserProfile": {
+        "userName": "User Name",
+        "viewProfile": "View Profile"
+      },
+      "LocaleSwitcher": {
+        "label": "Language",
+        "locale": "{locale}"
+      },
+      "group": "Group 1"
+    },
+    "Pages": {
+      "Home": {
+        "Content": {
+          "Sections": {
+            "schedule": { "title": "Schedule" },
+            "upcomingMeetings": {
+              "title": "Upcoming Meetings",
+              "tuesday": {
+                "date": "5/7",
+                "day": "Tues",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "Analysis"
+              },
+              "wednesday": {
+                "date": "4/7",
+                "day": "Wed",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "Calculus II"
+              }
+            },
+            "upcomingTasks": {
+              "title": "Upcoming Tasks",
+              "tuesday": {
+                "date": "5/7",
+                "day": "Tues",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "Algebra"
+              },
+              "wednesday": {
+                "date": "4/7",
+                "day": "Wed",
+                "time": "12:30 pm - 2:00 pm",
+                "subject": "Geometry"
+              }
+            },
+            "myCourses": {
+              "title": "My Courses",
+              "viewAll": "View All",
+              "card": {
+                "title": "Course Name",
+                "teacherName": "Teacher Name"
+              }
+            },
+            "library": {
+              "title": "Library",
+              "viewAll": "View All",
+              "card": {
+                "title": "Book Name",
+                "teacherName": "Author Name"
+              }
+            },
+            "featuredTeachers": {
+              "title": "Featured Teachers",
+              "viewAll": "View All",
+              "card": {
+                "teacherName": "Teacher Name",
+                "coursesLength": "Courses: 14",
+                "booksLength": "Books: 12"
+              }
+            }
+          }
+        }
+      },
+      "MyCourses": {
+        "Content": {
+          "Sections": {
+            "courseCard": {
+              "title": "Course Name",
+              "teacherName": "Teacher Name",
+              "addCourse": {
+                "title": "Add Course"
+              }
+            }
+          }
+        },
+        "Course": {
+          "Content": {
+            "Sections": {
+              "hiddenBtn": "hidden",
+              "announcementsSection": {
+                "label": "Announcements",
+                "data": {
+                  "title": "Quiz Section",
+                  "desc": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+                  "date": "2023-10-06"
+                }
+              },
+              "tasksSection": {
+                "label": "Tasks",
+                "submitted": "Submitted",
+                "ended": "Ended",
+                "submitBtn": "Submit",
+                "uploadBtn": "Attach File",
+                "data": {
+                  "title": "Assignment Section",
+                  "desc": "Lorem ipsum dolor sit amet consectetur. Cras diam pellentesque turpis ornare vestibulum.",
+                  "type": "Assignment",
+                  "date": "2023-10-01",
+                  "time": "10:00 AM",
+                  "dummyFileName": "Dummy File Name"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Library": {
+        "Content": {
+          "Sections": {
+            "libraryCard": {
+              "title": "Book Name",
+              "teacherName": "Author Name"
+            }
+          }
+        }
+      },
+      "Teachers": {
+        "Content": {
+          "Sections": {
+            "teacherCard": {
+              "teacherName": "Teacher Name",
+              "coursesLength": "Courses: 14",
+              "booksLength": "Books: 12"
+            }
+          }
+        }
+      }
+    }
+  }
+}
