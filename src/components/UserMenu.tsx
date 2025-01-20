@@ -26,7 +26,7 @@ export default function UserMenu() {
         </div>
       ) : authenticated ? (
         <div className="flex items-center gap-3">
-          <SignOutBtn forHeader  authenticated={authenticated}/>
+          <SignOutBtn forHeader authenticated={authenticated} />
 
           <Image
             src="/person.webp"
@@ -39,13 +39,13 @@ export default function UserMenu() {
             <p className="text-white text-lg font-medium">{t("userName")}</p>
             <p className="text-[#C2C2C2] text-[15px]">{t("viewProfile")}</p>
           </div>
-          <LocaleSwitcher />
         </div>
       ) : (
         <Link href="/signIn" className="text-[#C2C2C2] hover:text-[#D2F473]">
           {t("signInBtn")}
         </Link>
       )}
+      <LocaleSwitcher />
     </div>
   );
 }

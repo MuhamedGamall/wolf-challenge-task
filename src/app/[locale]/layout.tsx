@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils";
 import { Lato } from "next/font/google";
 import { Providers } from "@/components/Providers";
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["300", "400", "100", "900", "700"],
-  variable: "--font-sans",
-});
+// const lato = Lato({
+//   subsets: ["latin"],
+//   weight: ["300", "400", "100", "900", "700"],
+//   variable: "--font-sans",
+// });
 
 export default async function LocaleLayout({
   children,
