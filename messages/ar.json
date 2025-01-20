@@ -1,7 +1,7 @@
 {
   "MetaData": {
     "title": "Wolf Challenge Task",
-    "description": "Wolf Challenge Task, built with Next.js and Tailwind CSS."
+    "description": "Wolf Challenge Task, تم بناءه باستخدام Next.js و Tailwind CSS."
   },
   "Layout": {
     "Header": {
@@ -15,7 +15,9 @@
       },
       "UserProfile": {
         "userName": "اسم المستخدم",
-        "viewProfile": "عرض الملف الشخصي"
+        "viewProfile": "عرض الملف الشخصي",
+        "signInBtn": "تسجيل الدخول",
+        "signOutBtn": "تسجيل الخروج"
       },
       "group": "المجموعة 1",
 
@@ -32,6 +34,19 @@
       "universities": "الجامعات"
     },
     "Pages": {
+      "Auth": {
+        "Signin": {
+          "title": "تسجيل الدخول إلى حسابك",
+          "emailLabel": "البريد الإلكتروني",
+          "passwordLabel": "كلمة المرور",
+          "submitButton": "تسجيل الدخول",
+          "error": {
+            "invalidCredentials": "بيانات الاعتماد غير صالحة",
+            "fillAllFields": "يرجى ملء جميع الحقول",
+            "default": "حدث خطأ. حاول مرة اخرى."
+          }
+        }
+      },
       "Home": {
         "Content": {
           "Sections": {

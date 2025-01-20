@@ -22,7 +22,9 @@
       },
       "UserProfile": {
         "userName": "User Name",
-        "viewProfile": "View Profile"
+        "viewProfile": "View Profile",
+        "signInBtn": "Sign In",
+        "signOutBtn": "Sign Out"
       },
       "LocaleSwitcher": {
         "label": "Language",
@@ -31,6 +33,19 @@
       "group": "Group 1"
     },
     "Pages": {
+      "Auth": {
+        "Signin": {
+          "title": "Sign in to your account",
+          "emailLabel": "Email address",
+          "passwordLabel": "Password",
+          "submitButton": "Sign in",
+          "error": {
+            "invalidCredentials": "Invalid credentials",
+            "fillAllFields": "Please fill in all fields",
+            "default": "An error occurred. Please try again."
+          }
+        }
+      },
       "Home": {
         "Content": {
           "Sections": {
