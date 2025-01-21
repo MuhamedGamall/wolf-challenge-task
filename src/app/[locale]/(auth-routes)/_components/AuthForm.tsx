@@ -10,7 +10,7 @@ export default function SignIn() {
   const [error, setError] = useState("");
   const locale = useLocale();
 
-  const callbackUrl = `/${locale}/`;
+  const callbackUrl = `/${locale}`;
   const t = useTranslations("Layout.Pages.Auth.Signin");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
