@@ -1,12 +1,11 @@
 import { withAuth } from "next-auth/middleware";
 import createMiddleware from "next-intl/middleware";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
 
 const publicPages = ["/", "/signIn", "/library", "/universities", "/teachers"];
 
-const locales = routing.locales
-
+const { locales, defaultLocale } = routing;
 const handleI18nRouting = createMiddleware(routing);
 
 const authMiddleware = withAuth(
@@ -23,7 +22,7 @@ const authMiddleware = withAuth(
   }
 );
 
-export default function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
   const publicPathnameRegex = RegExp(
     `^(/(${locales.join("|")}))?(${publicPages
       .flatMap((p) => (p === "/" ? ["", "/"] : p))
@@ -31,6 +30,16 @@ export default function middleware(req: NextRequest) {
     "i"
   );
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
+
+  const locale = req.cookies.get("NEXT_LOCALE")?.value || defaultLocale;
+  const isLoggedIn = req.cookies.get("next-auth.session-token")?.value;
+  const redirectUrl = new URL(`/${locale}`, req.url);
+
+  if (isLoggedIn) {
+    if (req.nextUrl.pathname === `/${locale}/signIn`) {
+      return NextResponse.redirect(redirectUrl);
+    }
+  }
 
   if (isPublicPage) {
     return handleI18nRouting(req);
