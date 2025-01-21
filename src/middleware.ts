@@ -36,15 +36,10 @@ export default async function middleware(req: NextRequest) {
     req.cookies.get("next-auth.session-token")?.value ||
     req.cookies.get("__Secure-next-auth.session-token")?.value;
 
-  const redirectUrl = new URL(`/${locale}/`, req.nextUrl.origin);
+  const redirectUrl = new URL(`/${locale}`, req.nextUrl.origin);
 
-  console.log("Pathname:", req.nextUrl.pathname);
-  console.log("Locale:", locale);
-  console.log("Is Logged In:", !!isLoggedIn);
 
-  // Redirect logged-in users away from the sign-in page
   if (isLoggedIn && req.nextUrl.pathname === `/${locale}/signIn`) {
-    console.log("Redirecting to:", redirectUrl.toString());
     return NextResponse.redirect(redirectUrl);
   }
 
