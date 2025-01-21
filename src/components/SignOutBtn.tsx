@@ -18,7 +18,7 @@ export default function SignOutBtn({
   return (
     <button
       className=" "
-      onClick={() => signOut({ callbackUrl: `/${locale}/` })}
+      onClick={() => signOut({ callbackUrl: `/${locale}` })}
     >
       {forHeader ? (
         <div className="text-white md:block hidden hover:text-[#D2F473] text-xs">
