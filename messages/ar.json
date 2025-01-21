@@ -4,6 +4,7 @@
     "description": "Wolf Challenge Task, تم بناءه باستخدام Next.js و Tailwind CSS."
   },
   "Layout": {
+    "BackToHome": "العودة إلى الصفحة الرئيسية",
     "Header": {
       "title": {
         "home": "لوحة التحكم",

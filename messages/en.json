@@ -4,6 +4,7 @@
     "description": "Wolf Challenge Task, built with Next.js and Tailwind CSS."
   },
   "Layout": {
+    "BackToHome": "Back to Home",
     "Sidebar": {
       "home": "Dashboard",
       "courses": "Courses",
