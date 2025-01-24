@@ -152,6 +152,29 @@
                 }
               }
             }
+          },
+          "Create": {
+            "Content": {
+              "Sections": {
+                "form": {
+                  "alerts": {
+                    "courseCreated": "تم انشاء الدورة بنجاح",
+                    "courseNotCreated": "حدث خطاء. حاول مرة اخرى.",
+                    "failedToUpload": "فشل في تحميل {fileType}. حاول مرة اخرى مع {fileType} ملف."
+                  },
+                  "tabOneLabel": "Zod نموزج",
+                  "tabTwoLabel": "Yup نموزج",
+                  "submitBtn": "اضافة دورة",
+                  "uploadBtn": "انقر لتحميل {fileType, select, image {صورة} video {فيديو} other {ملف}}",
+                  "labels": {
+                    "title": "العنوان",
+                    "description": "الوصف",
+                    "image": "الصورة",
+                    "video": "الفيديو"
+                  }
+                }
+              }
+            }
           }
         }
       },

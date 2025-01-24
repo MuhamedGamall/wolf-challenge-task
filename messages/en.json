@@ -150,6 +150,29 @@
                 }
               }
             }
+          },
+          "Create": {
+            "Content": {
+              "Sections": {
+                "form": {
+                  "alerts": {
+                    "courseCreated": "Course created successfully",
+                    "courseNotCreated": "Something went wrong. Please try again.",
+                    "failedToUpload": "Failed to upload {fileType}. Please try again with a {fileType} file."
+                  },
+                  "tabOneLabel": "Zod Form",
+                  "tabTwoLabel": "Yup Form",
+                  "submitBtn": "Create Course",
+                  "uploadBtn": "Click to upload {fileType}",
+                  "labels": {
+                    "title": "Title",
+                    "description": "Description",
+                    "image": "Image",
+                    "video": "Video"
+                  }
+                }
+              }
+            }
           }
         }
       },

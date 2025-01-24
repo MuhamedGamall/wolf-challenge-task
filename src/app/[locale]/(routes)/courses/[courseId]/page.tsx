@@ -1,9 +1,8 @@
-import { getLocale, getTranslations } from "next-intl/server";
 import TabbedContent from "../../../../../components/TabbedContent";
 import Announcements from "./_components/Announcements";
 import Tasks from "./_components/Tasks";
 
-export default async function CoursePage() {
+export default function CoursePage() {
   return (
     <TabbedContent
       TabOneContent={Announcements}
