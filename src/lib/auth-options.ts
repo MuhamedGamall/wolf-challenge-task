@@ -1,6 +1,5 @@
 import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
 
 export const authOptions: AuthOptions = {
   providers: [
@@ -17,8 +16,6 @@ export const authOptions: AuthOptions = {
       },
       async authorize(credentials, req) {
         const locale = req?.headers?.["accept-language"] || "en";
-        console.log(locale);
-        
         const { email, password } = credentials as {
           email: string;
           password: string;
