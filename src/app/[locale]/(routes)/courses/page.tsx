@@ -1,4 +1,5 @@
 import CourseCard from "@/components/CourseCard";
+import { Link } from "@/i18n/routing";
 import { Plus } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 
@@ -16,14 +17,14 @@ export default async function CoursesPage() {
         />
       ))}
       <div className=" lg:ml-16 w-fit flex items-center shadow-[0px_0px_15px_0px_#00000033] gap-10 justify-between text-white bg-[#484848] rounded-3xl px-7 py-4">
-        <div className="flex flex-col  gap-2">
+        <Link href="/courses/create" className="flex flex-col  gap-2">
           <div className="w-[35px] cursor-pointer h-[35px] mx-auto bg-[#D2F473] rounded-full flex items-center justify-center text-[#484848]">
             <Plus className="w-7 h-7" />
           </div>
           <span className="font-medium text-lg">
             {t("courseCard.addCourse.title")}
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );

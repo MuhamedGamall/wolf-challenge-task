@@ -1,52 +1,65 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Tab } from "./TabbedContent";
-import { useLocale } from "next-intl";
+import { Tab } from "@/types";
 
-export default function CourseBar({
+export default function TabbedBar({
   activeTab,
-  handleTabChange,
   locele,
-  announcementsLabel,
-  TaskLabel,
+  isTransitioning,
+  setIsTransitioning,
+  setActiveTab,
+  tabTwoLabel,
+  tabOneLabel,
 }: {
   activeTab: string;
-  handleTabChange: (tab: Tab) => void;
   locele: string;
-  TaskLabel: string;
-  announcementsLabel: string;
+  isTransitioning: boolean;
+  setIsTransitioning: React.Dispatch<React.SetStateAction<boolean>>;
+  setActiveTab: React.Dispatch<React.SetStateAction<Tab>>;
+  tabTwoLabel: string;
+  tabOneLabel: string;
 }) {
+  const handleTabChange = (tab: Tab) => {
+    if (tab !== activeTab && !isTransitioning) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveTab(tab);
+        setIsTransitioning(false);
+      }, 200);
+    }
+  };
+
   return (
     <div className="w-full">
       <div className="border-b border-zinc-700 mb-6">
         <div className="flex gap-8 text-sm relative">
           <button
-            onClick={() => handleTabChange("announcements")}
+            onClick={() => handleTabChange('tabOne')}
             className={cn(
               "px-4 py-2 transition-colors duration-200 w-full",
-              activeTab === "announcements"
+              activeTab === "tabOne"
                 ? "text-[#D2F473]"
                 : "text-zinc-400 hover:text-zinc-100"
             )}
           >
-            {announcementsLabel}
+            {tabOneLabel}
           </button>
           <button
-            onClick={() => handleTabChange("tasks")}
+            onClick={() => handleTabChange('tabTwo')}
             className={cn(
               "px-4 py-2 transition-colors text-center duration-200 w-full",
-              activeTab === "tasks"
+              activeTab === 'tabTwo'
                 ? "text-[#D2F473]"
                 : "text-zinc-400 hover:text-zinc-100"
             )}
           >
-            {TaskLabel}
+            {tabTwoLabel}
           </button>
           <div
             className={cn(
               "absolute bottom-0 h-0.5 bg-[#D2F473] transition-all duration-200 ease-in",
-              activeTab === "announcements"
+              activeTab === 'tabOne'
                 ? locele == "ar"
                   ? "right-0 w-[50%]"
                   : "left-0 w-[50%]"

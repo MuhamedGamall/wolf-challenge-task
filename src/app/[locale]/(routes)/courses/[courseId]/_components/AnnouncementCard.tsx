@@ -1,8 +1,5 @@
 "use client";
 
-import React from "react";
-import { File, FileUp } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export default function AnnouncementCard({

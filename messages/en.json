@@ -17,6 +17,7 @@
         "home": "Dashboard",
         "courses": "Courses",
         "courseName": "Course Name",
+        "createCourse": "Create Course",
         "library": "Library",
         "teachers": "Teachers",
         "universities": "Universities"
