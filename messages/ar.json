@@ -117,8 +117,11 @@
             "courseCard": {
               "title": "اسم الدورة",
               "teacherName": "اسم المدرس",
-              "addCourse": {
-                "title": "اضافة دورة"
+              "createCourseWithFormik": {
+                "title": "إنشاء دورة بواسطه Formik"
+              },
+              "createCourseWithReactHookForm": {
+                "title": "إنشاء دورة بواسطه React Hook Form"
               }
             }
           }

@@ -116,8 +116,11 @@
             "courseCard": {
               "title": "Course Name",
               "teacherName": "Teacher Name",
-              "addCourse": {
-                "title": "Add Course"
+              "createCourseWithFormik": {
+                "title": "Create Course with Formik"
+              },
+              "createCourseWithReactHookForm": {
+                "title": "Create Course with React Hook Form"
               }
             }
           }
