@@ -15,8 +15,9 @@ export default {
       },
       colors: {
         custom: {
-          accent: "#d6f27a",
-          background: "#484848",
+          accent: "#D6f27a",
+          accentDark: "#484848",
+          background: "#343434",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
