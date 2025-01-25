@@ -29,7 +29,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
-        className={cn(`font-[lato] p-5  antialiased bg-[#343434]`, {
+        className={cn(`font-[lato] p-5  antialiased bg-custom-background`, {
           "font-[cairo]": locale == "ar",
         })}
       >
