@@ -46,8 +46,7 @@ export default function CourseForm() {
     tab === "one"
       ? toFormikValidationSchema(createCourseSchemaWithZod(t))
       : createCourseSchemaWithYup(t);
-
-  const onSubmit = async (values: FormValuesType) => {
+  const onSubmit = async (values: FormValuesType, { resetForm }: any) => {
     try {
       const updatedValues = {
         ...values,
@@ -55,9 +54,9 @@ export default function CourseForm() {
         date: format(new Date()).split("GMT")[0],
         validationBuilder: tab === "one" ? "zod" : "yup",
       };
-
+      resetForm();
       setCourses((curr: Course[]) => [...curr, updatedValues]);
-      console.log(updatedValues);
+
       alert(t("alerts.courseCreated"));
     } catch (error) {
       alert(t("alerts.courseNotCreated"));
