@@ -184,7 +184,10 @@
                 },
                 "coursesList": {
                   "label": "Courses List",
-                  "coursesListEmpty": "No courses available"
+                  "coursesListEmpty": "No courses available",
+                  "course": {
+                    "generatedWith": "Generated with: {type} validator"
+                  }
                 }
               }
             }

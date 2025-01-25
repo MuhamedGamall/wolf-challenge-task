@@ -187,7 +187,10 @@
                 },
                 "coursesList": {
                   "label": "قائمة الدورات",
-                  "coursesListEmpty": "لا يوجد دورات متاحة حاليا"
+                  "coursesListEmpty": "لا يوجد دورات متاحة حاليا",
+                  "course": {
+                    "generatedWith": "تم انشاء بواسطة: {type}"
+                  }
                 }
               }
             }
