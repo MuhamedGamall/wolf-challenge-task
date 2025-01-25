@@ -1,5 +1,6 @@
 "use client";
 import { CoursesContext } from "@/components/Providers";
+import { truncateText } from "@/lib/utils";
 import { Course } from "@/types";
 import { Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -23,7 +24,7 @@ export default function CoursesList() {
           {courses.map((course) => (
             <li
               key={course.id}
-              className="flex  items-start gap-5 p-2 bg-[#484848] shadow-md rounded-md"
+              className="flex  items-start gap-5 p-2 bg-custom-accentDark shadow-md rounded-md"
             >
               <video
                 controls
@@ -36,15 +37,21 @@ export default function CoursesList() {
               </video>
               <div className="flex flex-col gap-1  w-full">
                 <p
-                  className="
-              text-lg font-semibold"
+                  className="  break-all   max-w-[340px] capitalize
+              text-lg font-semibold "
                 >
-                  {course.title}
+                  {truncateText(course.title, 25)}
                 </p>
-                <p className="overflow-hidden break-words text-sm max-w-[400px]">
-                  {course.description}
+
+                <p className="  block break-all  text-sm max-w-[300px] capitalize">
+                  {truncateText(course.description, 50)}
                 </p>
                 <p className=" text-sm text-gray-400 mt-2 ">{course.date}</p>
+                <p className=" text-sm text-custom-accent mt-2 ">
+                  {t("course.generatedWith", {
+                    type: course.validationBuilder.toUpperCase(),
+                  })}
+                </p>
               </div>
               <button
                 name="delete"

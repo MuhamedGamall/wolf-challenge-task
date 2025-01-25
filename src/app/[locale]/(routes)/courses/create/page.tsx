@@ -1,7 +1,8 @@
 // 'use client';
 import TabbedContent from "@/components/TabbedContent";
-import CourseForm from "./_components/Zod/CouresForm";
 import CoursesList from "./_components/CoursesList";
+import CourseForm from "./_components/CouresForm";
+
 export default function CreateCourse() {
   return (
     <div className="flex justify-between gap-10 max-lg:flex-col ">
