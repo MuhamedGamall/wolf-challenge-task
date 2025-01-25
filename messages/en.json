@@ -169,6 +169,17 @@
                     "description": "Description",
                     "image": "Image",
                     "video": "Video"
+                  },
+                  "inputErrorMessages": {
+                    "title": {
+                      "min": "Title must be at least 4 characters",
+                      "max": "Title must be less than 100 characters"
+                    },
+                    "description": {
+                      "max": "Description must be less than 500 characters"
+                    },
+                    "image": { "required": "Please upload image" },
+                    "video": { "required": "Please upload video" }
                   }
                 },
                 "coursesList": {

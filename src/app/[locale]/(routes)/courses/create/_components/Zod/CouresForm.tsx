@@ -12,33 +12,16 @@ import { format } from "node:util";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { createCourseSchema } from "./schema";
 
-// TODO: ADD LOCALIZATION
-export const CourseSchema = z.object({
-  title: z
-    .string()
-    .trim()
-    .min(4, { message: "Title must be at least 4 characters" })
-    .max(100, { message: "Title must be less than 100 characters" }),
-  description: z
-    .string()
-    .trim()
-    .max(500, { message: "Description must be less than 500 characters" }),
-  image: z
-    .string()
-    .refine((value) => value !== "", { message: "Please upload image" }),
-  video: z
-    .string()
-    .refine((value) => value !== "", { message: "Please upload video" }),
-});
-
+type CourseSchema = z.infer<ReturnType<typeof createCourseSchema>>;
 export default function CourseForm() {
-  const { courses, setCourses } = useContext(CoursesContext);
+  const { setCourses } = useContext(CoursesContext);
   const t = useTranslations(
     "Layout.Pages.MyCourses.Course.Create.Content.Sections.form"
   );
-  const form = useForm<z.infer<typeof CourseSchema>>({
-    resolver: zodResolver(CourseSchema),
+  const form = useForm<CourseSchema>({
+    resolver: zodResolver(createCourseSchema(t)),
     defaultValues: {
       title: "",
       description: "",
@@ -47,14 +30,14 @@ export default function CourseForm() {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof CourseSchema>) => {
+  const onSubmit = async (values: CourseSchema) => {
     try {
       setCourses((curr: Course[]) => [
         ...curr,
         { ...values, id: Date.now(), date: format(new Date()).split("GMT")[0] },
       ]);
       alert(t("alerts.courseCreated"));
-      // return form.reset();
+      return form.reset();
     } catch (error) {
       alert(t("alerts.courseNotCreated"));
       console.error(error);
@@ -77,7 +60,7 @@ export default function CourseForm() {
               <FileUploader
                 t={t}
                 disabled={form.formState.isSubmitting}
-                file={form.getValues("image")}
+                file={form.getValues("image") as string}
                 onChange={field.onChange}
                 type="image"
               />
@@ -94,7 +77,7 @@ export default function CourseForm() {
               <FileUploader
                 t={t}
                 disabled={form.formState.isSubmitting}
-                file={form.getValues("video")}
+                file={form.getValues("video") as string}
                 onChange={field.onChange}
                 type="video"
               />
