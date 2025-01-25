@@ -69,7 +69,7 @@ export const FileUploader = ({
           {isVideo && (
             <iframe
               src={String(file)}
-              className="max-h-[300px] rounded-md shadow-md "
+              className="h-[300px] rounded-md shadow-md "
               title="Uploaded video preview"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -80,7 +80,7 @@ export const FileUploader = ({
       <label
         htmlFor={type + "-file"}
         className={cn(
-          "bg-[#484848]  w-full shadow-md flex items-center justify-center flex-col text-center gap-2 rounded-md p-4",
+          "bg-custom-accentDark  w-full shadow-md flex items-center justify-center flex-col text-center gap-2 rounded-md p-4",
           {
             "opacity-50": disabled,
             "cursor-not-allowed": disabled,
@@ -89,7 +89,7 @@ export const FileUploader = ({
           }
         )}
       >
-        <FileIcon className="h-6 w-6 text-[#D2F473]" />
+        <FileIcon className="h-6 w-6 text-custom-accent" />
         <div>
           {!file && (
             <p className="text-gray-400 font-medium">

@@ -26,14 +26,14 @@ export default function LibraryCard({
         height={200}
         className="object-cover w-full rounded-t-3xl"
       />
-      <div className="flex items-center gap-3 justify-between bg-[#484848] rounded-b-3xl px-7 py-6 w-full">
+      <div className="flex items-center gap-3 justify-between bg-custom-accentDark rounded-b-3xl px-7 py-6 w-full">
         <div className="flex flex-col px-2">
           <span className="font-medium max-xs:text-lg text-2xl ">
             {bookName}
           </span>
           <span className=" text-sm ">{teacherName}</span>
         </div>
-        <div className="min-w-[30px] min-h-[30px] bg-[#D2F473] rounded-full flex items-center justify-center text-[#484848]">
+        <div className="min-w-[30px] min-h-[30px] bg-custom-accent rounded-full flex items-center justify-center text-custom-accentDark">
           <Chevron className="w-6 h-6" />
         </div>
       </div>

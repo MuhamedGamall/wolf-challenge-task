@@ -1,9 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
-import { JSX, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import TabbedBar from "@/components/TabbedBar";
 import { Tab } from "@/types";
+import { useParams, useSearchParams } from "next/navigation";
 
 export default function TabbedContent({
   TabOneContent,
@@ -18,10 +19,17 @@ export default function TabbedContent({
   tabTwoLabel: string;
   tabOneLabel: string;
 }) {
-  const [activeTab, setActiveTab] = useState<Tab>("tabOne");
+  const searchParams = useSearchParams();
+  const activeTabContentType = searchParams.get("tab") as "one" | "two";
+  const [activeTab, setActiveTab] = useState<Tab>(activeTabContentType === "one" ? "tabOne" : "tabTwo");
+  
   const [isTransitioning, setIsTransitioning] = useState(false);
   const locale = useLocale();
   const t = useTranslations(tMessages);
+
+  useEffect(() => {
+    setActiveTab(activeTabContentType === "one" ? "tabOne" : "tabTwo");
+  }, [activeTabContentType]);
 
   return (
     <div className="w-full">
@@ -42,7 +50,7 @@ export default function TabbedContent({
             : "translate-y-1 opacity-1"
         )}
       >
-        {activeTab === "tabOne" ? (
+        {activeTab === "tabOne"  ? (
           <TabOneContent t={t} locale={locale} />
         ) : (
           <TabTwoContent t={t} locale={locale} />

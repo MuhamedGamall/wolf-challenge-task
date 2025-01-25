@@ -62,7 +62,7 @@ function Sidebar() {
     <aside
       ref={sidebarRef}
       className={cn(
-        "z-50 transition-all overflow-hidden duration-200 fixed top-5 left-5 rounded-[25px] border px-3 border-[#D2F473] shadow-[0px_0px_15px_0px_#D2F47340] py-[9px] h-[82px] md:h-[750px] max-w-[90px] min-w-[90px] bg-[#484848] flex flex-col items-center justify-start",
+        "z-50 transition-all overflow-hidden duration-200 fixed top-5 left-5 rounded-[25px] border px-3 border-custom-accent shadow-[0px_0px_15px_0px_#D2F47340] py-[9px] h-[82px] md:h-[750px] max-w-[90px] min-w-[90px] bg-custom-accentDark flex flex-col items-center justify-start",
         {
           "h-[82px] ": !open && !isMobile,
           "h-[750px]": open && isMobile,
@@ -104,9 +104,9 @@ function Sidebar() {
               href={route.href}
               onClick={handleClickOnBtn}
               className={cn(
-                "w-[70px] h-[70px] mb-4 rounded-[25px] border-[#D2F473] flex flex-col items-center justify-center cursor-pointer hover:bg-[#D2F4731A] hover:border-2 transition-all duration-300",
+                "w-[70px] h-[70px] mb-4 rounded-[25px] border-custom-accent flex flex-col items-center justify-center cursor-pointer hover:bg-[#D2F4731A] hover:border-2 transition-all duration-300",
                 {
-                  "bg-[#D2F4731A] text-[#D2F473] border-2": isActive,
+                  "bg-[#D2F4731A] text-custom-accent border-2": isActive,
                   "text-gray-400": !isActive,
                 }
               )}

@@ -21,14 +21,14 @@ export default function SignOutBtn({
       onClick={() => signOut({ callbackUrl: `/${locale}` })}
     >
       {forHeader ? (
-        <div className="text-white md:block hidden hover:text-[#D2F473] text-xs">
+        <div className="text-white md:block hidden hover:text-custom-accent text-xs">
           {t("signOutBtn")}
         </div>
       ) : (
         authenticated && (
           <div
             className={
-              "hover:text-[#D2F473]    w-[70px] h-[70px] mb-4 text-gray-400 rounded-[25px] border-[#D2F473] hidden max-md:flex flex-col items-center justify-center cursor-pointer hover:bg-[#D2F4731A] hover:border-2 transition-all duration-300"
+              "hover:text-custom-accent    w-[70px] h-[70px] mb-4 text-gray-400 rounded-[25px] border-custom-accent hidden max-md:flex flex-col items-center justify-center cursor-pointer hover:bg-[#D2F4731A] hover:border-2 transition-all duration-300"
             }
           >
             <LogOut

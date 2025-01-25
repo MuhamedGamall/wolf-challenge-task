@@ -36,7 +36,7 @@ export default function LocaleSwitcherSelect({
     >
       <div className="relative">
         <select
-          className="block bg-[#484848]  min-w-[30px] rounded-md border transition-all  outline-none border-none text-white  py-2 pl-3 pr-8 text-sm  disabled:cursor-not-allowed appearance-none"
+          className="block bg-custom-accentDark  min-w-[30px] rounded-md border transition-all  outline-none border-none text-white  py-2 pl-3 pr-8 text-sm  disabled:cursor-not-allowed appearance-none"
           defaultValue={defaultValue}
           disabled={isPending}
           onChange={onSelectChange}

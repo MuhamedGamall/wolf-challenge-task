@@ -16,7 +16,7 @@ export default function UserMenu() {
   return (
     <div className="flex items-center gap-7">
       {loading ? (
-        <div className="bg-[#484848]  px-6 py-2 rounded-md">
+        <div className="bg-custom-accentDark  px-6 py-2 rounded-md">
           <LoaderIcon
             className="animate-spin"
             size={20}
@@ -41,7 +41,10 @@ export default function UserMenu() {
           </div>
         </div>
       ) : (
-        <Link href="/signIn" className="text-[#C2C2C2] hover:text-[#D2F473]">
+        <Link
+          href="/signIn"
+          className="text-[#C2C2C2] hover:text-custom-accent"
+        >
           {t("signInBtn")}
         </Link>
       )}
