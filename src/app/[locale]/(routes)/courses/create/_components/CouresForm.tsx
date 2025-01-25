@@ -8,7 +8,6 @@ import { Form, FormControl } from "@/components/ui/form";
 import { Course, FormFieldType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { format } from "node:util";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -20,6 +19,7 @@ import {
   createCourseSchemaWithZod,
 } from "@/lib/formSchema";
 import { useParams, useSearchParams } from "next/navigation";
+import { format } from "util";
 
 type ZodCourseSchema = z.infer<ReturnType<typeof createCourseSchemaWithZod>>;
 type YupCourseSchema = y.InferType<
