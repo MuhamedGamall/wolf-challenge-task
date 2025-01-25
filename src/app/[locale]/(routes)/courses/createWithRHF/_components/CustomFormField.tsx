@@ -4,9 +4,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+} from "../../../../../../components/ui/form";
+import { Input } from "../../../../../../components/ui/input";
+import { Textarea } from "../../../../../../components/ui/textarea";
 import { CustomFormFieldProps, FormFieldType } from "@/types";
 
 const RenderInput = ({
@@ -16,6 +16,7 @@ const RenderInput = ({
   field: any;
   props: CustomFormFieldProps;
 }) => {
+
   switch (props.fieldType) {
     case FormFieldType.INPUT:
       return (

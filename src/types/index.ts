@@ -15,7 +15,7 @@ export enum FormFieldType {
   SKELETON = "skeleton",
 }
 export type CustomFormFieldProps = {
-  control: Control<any>;
+  control?: Control<any>;
   name: string;
   label?: string;
   placeholder?: string;

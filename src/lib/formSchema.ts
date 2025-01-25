@@ -22,7 +22,8 @@ export const createCourseSchemaWithZod = (t: any) =>
 
 export const createCourseSchemaWithYup = (t: any) =>
   y.object().shape({
-    title: y.string()
+    title: y
+      .string()
       .required()
       .min(4, t("inputErrorMessages.title.min"))
       .max(100, t("inputErrorMessages.title.max")),

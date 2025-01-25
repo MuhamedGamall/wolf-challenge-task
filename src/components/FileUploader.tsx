@@ -63,13 +63,13 @@ export const FileUploader = ({
               width={300}
               height={300}
               loading="lazy"
-              className="max-h-[300px]  rounded-md object-cover shadow-md "
+              className="aspect-video w-full  rounded-md object-cover shadow-md "
             />
           )}
           {isVideo && (
             <iframe
               src={String(file)}
-              className="h-[300px] rounded-md shadow-md "
+              className="aspect-video rounded-md shadow-md "
               title="Uploaded video preview"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

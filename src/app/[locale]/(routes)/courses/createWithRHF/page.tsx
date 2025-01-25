@@ -1,6 +1,5 @@
-// 'use client';
 import TabbedContent from "@/components/TabbedContent";
-import CoursesList from "./_components/CoursesList";
+import CoursesList from "../_components/CoursesList";
 import CourseForm from "./_components/CouresForm";
 
 export default function CreateCourse() {

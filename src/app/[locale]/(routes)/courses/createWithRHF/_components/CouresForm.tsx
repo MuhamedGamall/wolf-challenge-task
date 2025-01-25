@@ -1,6 +1,5 @@
 "use client";
 
-import CustomFormField from "@/components/CustomFormField";
 import { FileUploader } from "@/components/FileUploader";
 import { CoursesContext } from "@/components/Providers";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ import { Form, FormControl } from "@/components/ui/form";
 import { Course, FormFieldType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import * as y from "yup";
@@ -20,6 +19,7 @@ import {
 } from "@/lib/formSchema";
 import { useParams, useSearchParams } from "next/navigation";
 import { format } from "util";
+import CustomFormField from "./CustomFormField";
 
 type ZodCourseSchema = z.infer<ReturnType<typeof createCourseSchemaWithZod>>;
 type YupCourseSchema = y.InferType<
@@ -50,7 +50,9 @@ export default function CourseForm() {
       video: "",
     },
   });
-
+  useEffect(() => {
+    form.reset();
+  }, [tab]);
   const onSubmit = async (values: FormValuesType) => {
     try {
       const updatedValues = {
@@ -69,7 +71,7 @@ export default function CourseForm() {
   };
 
   return (
-    <Form {...form}>
+    <Form {...form} key={tab}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="max-w-[800px] space-y-6 "
