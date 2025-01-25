@@ -162,6 +162,7 @@
                     "courseNotCreated": "حدث خطاء. حاول مرة اخرى.",
                     "failedToUpload": "فشل في تحميل {fileType}. حاول مرة اخرى مع {fileType} ملف."
                   },
+
                   "tabOneLabel": "Zod نموزج",
                   "tabTwoLabel": "Yup نموزج",
                   "submitBtn": "اضافة دورة",
@@ -172,6 +173,10 @@
                     "image": "الصورة",
                     "video": "الفيديو"
                   }
+                },
+                "coursesList": {
+                  "label": "قائمة الدورات",
+                  "coursesListEmpty": "لا يوجد دورات متاحة حاليا"
                 }
               }
             }

@@ -69,11 +69,11 @@ export const FileUploader = ({
           {isVideo && (
             <iframe
               src={String(file)}
-              className="w-full h-full max-h-[600px] rounded-md shadow-md "
+              className="max-h-[300px] rounded-md shadow-md "
               title="Uploaded video preview"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            />
+            ></iframe>
           )}
         </>
       )}

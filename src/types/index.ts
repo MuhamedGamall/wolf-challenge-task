@@ -30,4 +30,6 @@ export type Course = {
   description: string;
   image: string;
   video: string;
+  id: number;
+  date: string;
 };

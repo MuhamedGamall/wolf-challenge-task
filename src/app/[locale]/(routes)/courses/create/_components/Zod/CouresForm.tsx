@@ -2,18 +2,18 @@
 
 import CustomFormField from "@/components/CustomFormField";
 import { FileUploader } from "@/components/FileUploader";
-import { MyContext } from "@/components/Providers";
+import { CoursesContext } from "@/components/Providers";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl } from "@/components/ui/form";
 import { Course, FormFieldType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import { format } from "node:util";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-
-// TODO: ADD LOCALIZATION 
+// TODO: ADD LOCALIZATION
 export const CourseSchema = z.object({
   title: z
     .string()
@@ -33,7 +33,7 @@ export const CourseSchema = z.object({
 });
 
 export default function CourseForm() {
-  const { courses, setCourses } = useContext(MyContext);
+  const { courses, setCourses } = useContext(CoursesContext);
   const t = useTranslations(
     "Layout.Pages.MyCourses.Course.Create.Content.Sections.form"
   );
@@ -49,9 +49,12 @@ export default function CourseForm() {
 
   const onSubmit = async (values: z.infer<typeof CourseSchema>) => {
     try {
-      setCourses((curr: Course[]) => [...curr, { ...values, id: Date.now() }]);
+      setCourses((curr: Course[]) => [
+        ...curr,
+        { ...values, id: Date.now(), date: format(new Date()).split("GMT")[0] },
+      ]);
       alert(t("alerts.courseCreated"));
-      return form.reset();
+      // return form.reset();
     } catch (error) {
       alert(t("alerts.courseNotCreated"));
       console.error(error);
