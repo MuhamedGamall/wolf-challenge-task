@@ -16,9 +16,15 @@ export default async function CoursesPage() {
           locale={locale}
         />
       ))}
-      <div className=" lg:ml-16 w-fit flex items-center shadow-[0px_0px_15px_0px_#00000033] gap-10 justify-between text-white bg-[#484848] rounded-3xl px-7 py-4">
-        <Link href="/courses/create" className="flex flex-col  gap-2">
-          <div className="w-[35px] cursor-pointer h-[35px] mx-auto bg-[#D2F473] rounded-full flex items-center justify-center text-[#484848]">
+      <div className=" lg:ml-16 w-fit flex items-center shadow-[0px_0px_15px_0px_#00000033] gap-10 justify-between text-white bg-custom-accentDark rounded-3xl px-7 py-4">
+        <Link
+          href={{
+            pathname: "/courses/create",
+            query: { tab: "one" },
+          }}
+          className="flex flex-col  gap-2"
+        >
+          <div className="w-[35px] cursor-pointer h-[35px] mx-auto bg-custom-accent rounded-full flex items-center justify-center text-custom-accentDark">
             <Plus className="w-7 h-7" />
           </div>
           <span className="font-medium text-lg">

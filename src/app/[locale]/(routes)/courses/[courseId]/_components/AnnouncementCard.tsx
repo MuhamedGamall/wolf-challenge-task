@@ -10,11 +10,11 @@ export default function AnnouncementCard({
   hiddenOnly?: boolean;
 }) {
   return (
-    <div className="flex max-lg:items-end justify-between max-lg:flex-col  gap-5 bg-[#484848] shadow-[0px_0px_15px_0px_#00000033] rounded-md p-5">
+    <div className="flex max-lg:items-end justify-between max-lg:flex-col  gap-5 bg-custom-accentDark shadow-[0px_0px_15px_0px_#00000033] rounded-md p-5">
       <div className="flex items-start gap-7 w-full max-sm:flex-col">
         <Checkbox
           checked={hiddenOnly}
-          className="data-[state=checked]:bg-[#D2F473] border border-[#D2F473] w-6 h-6 rounded-lg [&>.text-current]:text-slate-800 "
+          className="data-[state=checked]:bg-custom-accent border border-custom-accent w-6 h-6 rounded-lg [&>.text-current]:text-slate-800 "
           id={"data-" + data.title}
         />
         <div className="flex items-start flex-col ">
