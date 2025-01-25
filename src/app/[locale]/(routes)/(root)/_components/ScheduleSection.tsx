@@ -8,8 +8,8 @@ const UpcomingSection = ({ t, type }: { t: any; type: string }) => {
       <h2 className="max-sm:text-lg text-2xl font-medium text-white mb-2">
         {t(`${type}.title`)}
       </h2>
-      <div className="py-7 px-8 shadow-[0px_0px_15px_0px_#00000033] bg-[#484848] flex rounded-xl text-center gap-3 flex-col justify-center">
-        <div className="flex max-xs:items-start max-xs:flex-col xs:gap-3 max-xs:gap-2 bg-[#343434] p-3 rounded-xl">
+      <div className="py-7 px-8 shadow-[0px_0px_15px_0px_#00000033] bg-custom-accentDark flex rounded-xl text-center gap-3 flex-col justify-center">
+        <div className="flex max-xs:items-start max-xs:flex-col xs:gap-3 max-xs:gap-2 bg-custom-background p-3 rounded-xl">
           <div className="flex max-xs:items-center max-xs:gap-2 items-center justify-center xs:flex-col">
             <span className="text-white text-[20px]">
               {t(`${type}.tuesday.day`)}
@@ -29,7 +29,7 @@ const UpcomingSection = ({ t, type }: { t: any; type: string }) => {
             </span>
           </div>
         </div>
-        <div className="flex max-xs:items-start max-xs:flex-col xs:gap-3 max-xs:gap-2 bg-[#343434] p-3 rounded-xl">
+        <div className="flex max-xs:items-start max-xs:flex-col xs:gap-3 max-xs:gap-2 bg-custom-background p-3 rounded-xl">
           <div className="flex max-xs:items-center max-xs:gap-2 items-center justify-center xs:flex-col">
             <span className="text-white text-[20px]">
               {t(`${type}.wednesday.day`)}
@@ -62,7 +62,8 @@ export default function ScheduleSection({ t }: { t: any }) {
           <h2 className="max-sm:text-lg text-2xl font-medium text-white mb-3 w-full">
             {t("schedule.title")}
           </h2>
-          <div className="w-full h-[430px]  rounded-xl bg-gradient-to-br from-[#343434] to-[#484848] shadow-[0px_0px_15px_0px_#00000033]" />        </div>
+          <div className="w-full h-[430px]  rounded-xl bg-gradient-to-br from-custom-background to-custom-accentDark shadow-[0px_0px_15px_0px_#00000033]" />{" "}
+        </div>
         <div className="flex-[1.2] flex max-md:flex-col lg:flex-col gap-7">
           <UpcomingSection t={t} type="upcomingMeetings" />
           <UpcomingSection t={t} type="upcomingTasks" />
