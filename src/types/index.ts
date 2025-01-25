@@ -32,4 +32,5 @@ export type Course = {
   video: string;
   id: number;
   date: string;
+  validationBuilder: 'Yup' | 'Zod';
 };
