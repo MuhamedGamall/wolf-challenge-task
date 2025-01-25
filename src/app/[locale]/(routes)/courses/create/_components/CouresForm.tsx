@@ -61,7 +61,7 @@ export default function CourseForm() {
       };
       setCourses((curr: Course[]) => [...curr, updatedValues]);
       alert(t("alerts.courseCreated"));
-      // return form.reset();
+      return form.reset();
     } catch (error) {
       alert(t("alerts.courseNotCreated"));
       console.error(error);
