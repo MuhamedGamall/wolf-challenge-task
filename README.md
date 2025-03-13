@@ -32,7 +32,7 @@
 **❓ What was the most difficult thing about working at Web Pioneer?**  
 *ما أصعب شيء واجهته أثناء العمل في Web Pioneer؟*
 
-- I worked on two projects, but not at the same time—each project took three months. The big challenge was adapting to a real work environment, meeting deadlines, and ensuring my code quality.
+- I worked on two Ecommerce projects. The big challenge was adapting to a real work environment, meeting deadlines, and ensuring my code quality.
 
 ---
 
@@ -54,7 +54,7 @@
 **❓ What new skills did you gain from Blink22?**  
 *ما المهارات الجديدة التي اكتسبتها من Blink22؟*
 
-- I learned React.js, Next.js, and TypeScript. I also used Git and helped with small tasks in the team.
+- I learned more about React.js, Next.js, tailwind, and TypeScript. I also used Git and helped with small tasks in the team.
 
 ---
 
@@ -76,7 +76,7 @@
 **❓ Which programming tools are you comfortable with?**  
 *ما الأدوات البرمجية التي تشعر بالراحة في استخدامها؟*
 
-- I am confident in Next.js, React.js, TypeScript, MUI, and React Query.
+- I am confident in Next.js, React.js, TypeScript, tailwind, MUI, and React Query.
 
 ---
 
@@ -98,7 +98,7 @@
 **❓ What makes you interested in joining our team?**  
 *ما الذي يجعلك مهتمًا بالانضمام إلى فريقنا؟*
 
-- I see this company  as a big contact center in Cairo, so I like the professional work environment and the opportunity to grow while collaborating with a skilled team.
+- I see this company as a big contact center in Cairo, so I like the professional work environment and the opportunity to grow while collaborating with a skilled team.
 
 ---
 
