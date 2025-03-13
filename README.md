@@ -21,7 +21,7 @@
 **❓ Can you give a brief introduction about your experience?**  
 *هل يمكنك أن تعطيني مقدمة قصيرة عن خبرتك؟*
 
-- I am a frontend developer with one year and half of experience in Next.js, React.js, Tailwind, and TypeScript. I worked at Blink22 as an intern, then at Web Pioneer on two e-commerce projects. Now, I work at Wolf Software on a project connecting companies with other organizations.
+- I have one year and half of experience as a frontend developer with Next.js, React.js, Tailwind, and TypeScript. I worked at Blink22 as an intern, then at Web Pioneer on two e-commerce projects. Now, I work at Wolf Software on a project connecting companies with other organizations.
 
 ---
 
