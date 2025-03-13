@@ -21,7 +21,7 @@
 **❓ Can you give a brief introduction about your experience?**  
 *هل يمكنك أن تعطيني مقدمة قصيرة عن خبرتك؟*
 
-- I am a frontend developer with experience in Next.js, React.js, and TypeScript. I worked at Blink22 as an intern, then at Web Pioneer on e-commerce projects. Now, I work at Wolf Software on a project connecting companies with other organizations.
+- I am a frontend developer with one year and half of experience in Next.js, React.js, Tailwind, and TypeScript. I worked at Blink22 as an intern, then at Web Pioneer on two e-commerce projects. Now, I work at Wolf Software on a project connecting companies with other organizations.
 
 ---
 
@@ -112,4 +112,4 @@ You can ask:
 🔸 **About the Hiring Process:**
 
 - What is the next step in the hiring process?
-- When can I expect to hear back after the interview?
+- How soon should I expect feedback after the interview?
